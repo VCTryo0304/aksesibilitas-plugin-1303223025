@@ -2,15 +2,27 @@
 
     console.log("ACCESSIBILITY PLUGIN INIT");
 
-    // =============================
-    // awal perubahan
-    // =============================
+    
     // =============================
     // 1. LOAD CSS (AUTO)
     // =============================
     const css = document.createElement("link");
     css.rel = "stylesheet";
-    css.href = "https://cdn.jsdelivr.net/gh/VCTryo0304/aksesibilitas-plugin-1303223025/aksesibilitas.css";
+    css.href = "https://cdn.jsdelivr.net/gh/VCTryo0304/aksesibilitas-plugin-1303223025@latest/aksesibilitas.css";
+    // =============================
+    // awal perubahan
+    // =============================
+        css.onload = () => {
+        console.log("CSS LOADED");
+        injectPanel();
+    };
+
+    css.onerror = () => {
+        console.error("CSS FAILED LOAD");
+    };
+    // =============================
+    // akhir perubahan
+    // =============================
     document.head.appendChild(css);
 
     // =============================
@@ -96,15 +108,19 @@
 
         document.body.appendChild(tab);
     }
-
+ // =============================
+    // awal perubahan
+    // =============================
+    
     // =============================
     // 4. INIT SAAT DOM READY
     // =============================
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", injectPanel);
-    } else {
-        injectPanel();
-    }
-
+    //if (document.readyState === "loading") {
+        //document.addEventListener("DOMContentLoaded", injectPanel);
+    //} else {
+        //injectPanel();
+    //}
+        // =============================
+    // akhir perubahan
+    // =============================
 })();
- Ini isi accessibiloty.js
