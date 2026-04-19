@@ -3,6 +3,9 @@
     console.log("ACCESSIBILITY PLUGIN INIT");
 
     // =============================
+    // awal perubahan
+    // =============================
+    // =============================
     // 1. LOAD CSS (AUTO)
     // =============================
     const css = document.createElement("link");
